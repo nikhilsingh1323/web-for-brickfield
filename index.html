@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAA PUSHPA Brickfield</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./logo_image.png" alt="logo">
+        </div>
+        <div class="header-description">
+            <h1 class="main-heading">MAA PUSHPA Brickfield</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button id="menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+    </header>
+
+    <div class="sidebar hidden" id="side-bar">
+        <div class="nav-item">
+            <a href="#home">Home</a>
+        </div>
+        <div class="nav-item">
+            <a href="#about">About</a>
+        </div>
+        <div class="nav-item">
+            <a href="">Product</a>
+        </div>
+        <div class="nav-item">
+            <a href="">Gallary</a>
+        </div>
+        <div class="nav-item">
+            <a href="">Contact</a>
+        </div>
+        <div class="nav-item">
+            <a href="">Order</a>
+        </div>
+    </div>
+
+
+
+    <section id="home" class="hero-section">
+
+        <div class="hero">
+            <video autoplay muted loop playsinline class="background-video">
+                <source src="heroVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h2>Welcome To MAA PUSHPA Brickfield</h2>
+                <p>At MAA PUSHPA Brickfield,we don't just make bricks - we build the foundation for your future.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2 class="internal-heading">About Us</h2>
+
+        <div class="chairman-profile">
+            <img src="chair personn.jpg" alt="Chairman of MAA PUSHPA Brickfield">
+            <div class="chairman-info">
+                <h3>Mr.Anoop Singh Tomar</h3>
+                <p>Chairman, MAA PUSHPA Brickfield</p>
+                <p>
+                    Mr.Anoop Singh Tomar inspired by his mother MAA PUSHPA to
+                    laid this foundation "MAA PUSHPA Brickfield" with year of dedication and Leadership toward quality,
+                    trust, and innovation in the brick
+                    manufacturing industry.MAA PUSHPA Brickfield is a trusted name in the brick manufacturing industry,
+                    known for delivering premium quality bricks at competitive prices. With 8years of experience and a
+                    deep understanding of construction needs, we focus on producing durable, weather-resistant, and
+                    eco-friendly bricks suitable for all types of building projects. Our state-of-the-art facility,
+                    dedicated workforce, and timely delivery services ensure customer satisfaction at every level.
+                    Whether you're building homes, factories, or commercial spaces, we provide strong foundations—one
+                    brick at a time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="product-section">
+        <h2 class="internal-heading">Our Products</h2>
+
+        <div class="instruction">
+            <p><b>Info-</b> The products are shown in below section. If you are intrested to buy our product please
+                click the order button on the respective product and fill the details in the form attached.</p>
+            <p><b>Note-</b> We take order minimum 3000 bricks and We deliver product in Lucknow, Sitapur and Hardoi
+                including delivery charges.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="./aval.jpg" alt="">
+                <h3>AVAAL</h3>
+                <p class="price">₹7 per brick</p>
+                <p></p>
+                <button class="order-button" onclick="openForm()">Order Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="./tedhaa.jpg" alt="">
+                <h3>TEDHAA</h3>
+                <p class="price">₹5 per brick</p>
+                <p></p>
+                <button class="order-button" onclick="openForm()">Order Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="./laal petui.jpg" alt="">
+                <h3>LAAL PETII</h3>
+                <p class="price">₹6per brick</p>
+                <p></p>
+                <button class="order-button" onclick="openForm()">Order Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="./seedha.jpg" alt="">
+                <h3>SEEDHA</h3>
+                <p class="price">₹6.5 per brick</p>
+                <p></p>
+                <button class="order-button" onclick="openForm()">Order Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="./kadda pila.jpg" alt="">
+                <h3>KADA PILA</h3>
+                <p class="price">₹5 per brick</p>
+                <p></p>
+                <button class="order-button" onclick="openForm()">Order Now</button>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <div class="form-overlay" id="popupForm">
+        <div class="order-form">
+            <h2>Place Your Order</h2>
+            <form id="orderForm">
+                <label for="product">Product Name:</label>
+                <input type="text" id="product" name="Product Name" required>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="Product Quantity" required>
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="Customer Name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="Phone Number" required>
+
+                <label for="location"> Delivery Address</Address>:</label>
+                <input type="text" id="location" name="Your Location" required>
+
+                <button class="place-order" id="placeOrder">Send Order</button>
+            </form>
+            <button class="close-button" onclick="closeForm()">Close</button>
+        </div>
+    </div>
+
+
+
+    <section id="gallery" class="section Gallery hidden ">
+        <h2 class="internal-heading">Gallery</h2>
+        <div class="Gallery-images">
+            <div class="Gallery-item">
+                <img src="pic 5.jpg" alt="pic 5.jpg" onclick="openLightbox(this)">
+                <div class="Gallery-caption">P.B.F Brickfield</div>
+            </div>
+            <div class="Gallery-item">
+                <img src="pic 3.jpg" alt="pic 3.jpg" onclick="openLightbox(this)">
+                <div class="Gallery-caption">SEEDHA (PRICE-6.5rs + delivery charge )</div>
+            </div>
+            <div class="Gallery-item">
+                <img src="pic 2.jpg" alt="pic.2jpg" onclick="openLightbox(this)">
+                <div class="Gallery-caption">TEDHAA (PRICE-5rs + delivery charge)</div>
+            </div>
+            <div class="Gallery-item">
+                <img src="pic 1.jpg" alt="pic 1.jpg" onclick="openLightbox(this)">
+                <div class="Gallery-caption">NARAM PILA (PRICE-3.5rs + delivery charge)</div>
+            </div>
+            <div class="Gallery-item">
+                <img src="loading.jpg" alt="loading.jpg" onclick="openLightbox(this)">
+                <div class="Gallery-caption">LOADING</div>
+            </div>
+            <div class="Gallery-item">
+                <img src="pic 4.jpg" alt="pic 4.jpg" onclick="openLightbox(this)">
+                <div class="Gallery-caption">LAAL PETII (PRICE-6rs + delivery charge)</div>
+            </div>
+            <div class="Gallery-item">
+                <img src="pic 7.jpg" alt="pic 7.jpg" onclick="openLightbox(this)">
+                <div class="Gallery-caption">AVVAL (PRICE-7rs + delivery charge)</div>
+            </div>
+            <!-- Repeat more items -->
+        </div>
+    </section>
+
+
+
+
+    <section id="contact" class="contact-section card">
+        <h2 class="internal-heading">Contact Me</h2>
+        <div class="contact-links">
+            <a href="tel:+919554351097" target="_blank" title="Call" class="contact-icon">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="mailto:nikkisinghtomar@gmail.com" target="_blank" title="Email" class="contact-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/919554351097 target=" _blank" title="WhatsApp" class="contact-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+        </div>
+    </section>
+
+
+    <footer class="business-footer">
+
+        <div class="footer-container">
+            <div class="footer-image-box">
+                <img src="genaral manegaar001.jpg" alt="Business Owner" class="footer-image" />
+            </div>
+
+            <div class="footer-details">
+                <h3> Genaral Manager </h3>
+                <p><strong>Name:</strong> Mr. Vipin Singh Tomar</p>
+                <p><strong>Phone:</strong> <a href="tel:+919554351097">+91 9554351097</a></p>
+                <p><strong>Email:</strong> <a href="mailto:nikkisinghtomar@gmail.com">nikkisinghtomar@gmail.com</a>
+                </p>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer-image-box">
+                <img src="marketing manegarrrrrrrr.jpg" alt="Business Owner" class="footer-image" />
+            </div>
+
+            <div class="footer-details">
+                <h3>Marketing Manager</h3>
+                <p><strong>Name:</strong> Mr. Manoj Singh Tomar</p>
+                <p><strong>Phone:</strong> <a href="tel:+919918606039">+91 9918606039</a></p>
+                <p><strong>Email:</strong> <a
+                        href="mailto:itsmedevanshtomar24@gmail.com">itsmedevanshtomar24@gmail.com</a>
+                </p>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer-image-box">
+                <img src="sales incharge.jpg" alt="Business Owner" class="footer-image" />
+            </div>
+
+            <div class="footer-details">
+                <h3>Sales Incharge</h3>
+                <p><strong>Name:</strong> Master Himanshu Singh Tomar</p>
+                <p><strong>Phone:</strong> <a href="tel:+918853788840">+91 8853788840</a></p>
+                <p><strong>Email:</strong> <a href="mailto:ht4886200@gmail.com">ht4886200@gmail.com</a>
+                </p>
+                <p></p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script defer src="script.js"></script>
+
+</body>
+
+</html>
